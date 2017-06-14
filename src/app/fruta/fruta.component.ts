@@ -12,6 +12,9 @@ export class FrutaComponent{
   public edad:number =23;
   public mayorDeEdad:boolean = true;
   public trabajos:Array<any> = ['Carpintero','Albañil', 'Blabla'];
+  comodin:any = "Cualquier cosa";
+
+  //Tipos de datos en angular 4
 
 
 
