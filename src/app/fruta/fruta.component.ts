@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+
+//Directiva tiene un componente
+//Atributo html ng-switch etc que se utiliza en la vista para añadir atributos etc
+//Directiva ngif condicion if en una vista
+
 @Component({
   selector: 'fruta',
   templateUrl : './fruta.component.html'

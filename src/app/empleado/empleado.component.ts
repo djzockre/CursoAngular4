@@ -9,6 +9,7 @@ export class EmpleadoComponent{
   public titulo = 'Componente empleados';
   public empleado:Empleado;
   public trabajadores:Array<Empleado>;
+  public trabajador_Externo:boolean;
 
   constructor(){
     this.empleado = new Empleado('Fernando Ruiz', 45,'Fullstack', true);
@@ -18,6 +19,8 @@ export class EmpleadoComponent{
         new Empleado('Victor robles', 45,'Cocinero', false)
 
     ];
+
+    this.trabajador_Externo = false;
 
   }
 
