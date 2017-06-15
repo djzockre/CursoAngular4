@@ -3,7 +3,16 @@
 <h3>Selector de colores</h3>
 <input type="text" [(ngModel)]="color_seleccionado"/>
 
-<pre>
+<pre [style.border] = "color_seleccionado == 'red' ? '5px solid black' : '1px solid white'"
+
+    [ngClass] ="{
+      bordeAzul : color_seleccionado =='blue',
+      bordeVerde : color_seleccionado =='green',
+      letraGrande : 1 == 1
+    }"
+><!--Directiva style NGSTYLE EN ATRIBUTO [class.bordeAzul]= "color_seleccionado == 'blue'"-->
+
+
   <h1>Color elejido:</h1>
   {{color_seleccionado}}
 </pre>
@@ -30,19 +39,22 @@
     'background': color,
     'color': 'white',
     'padding': '20px'
-      }" >Es de color Rojo</li><!--Dato de tipo string-->
+      }" >Es de color Rojo
+  </li><!--Dato de tipo string-->
 
       <li *ngSwitchCase="'blue'" [ngStyle]= "{
         'background': color,
         'color': 'white',
         'padding': '20px'
-      }" >Es de color Azul</li><!--Dato de tipo string-->
+      }" >Es de color Azul
+  </li><!--Dato de tipo string-->
 
       <li *ngSwitchCase="'green'" [ngStyle]= "{
         'background': color,
         'color': 'white',
         'padding': '20px'
-      }" >Es de color Verde</li><!--Dato de tipo string-->
+      }" >Es de color Verde
+      </li><!--Dato de tipo string-->
 
 </ul>
 
