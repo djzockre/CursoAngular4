@@ -1,0 +1,11 @@
+<h2>{{titulo}}</h2>
+
+
+<h2 *ngIf="parametro"> El parametro es{{parametro}}</h2>
+
+<h2 *ngIf="!parametro"> <button (click)="redirigir()">Ir la la página con parametro</button>
+<button (click)="redirigir2()">Ir a la home</button>
+</h2>
+
+
+<!-- Servicio realiza inyección de independencias -->

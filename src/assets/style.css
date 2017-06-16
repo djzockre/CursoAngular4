@@ -12,3 +12,8 @@
 .letraGrande{
   font-size: 49px;
 }
+
+.activado{
+   font-weight:bold;
+   background: yellow;
+}

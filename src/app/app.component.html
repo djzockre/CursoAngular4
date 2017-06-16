@@ -3,7 +3,31 @@
   <h3>
     Bienvenido a {{title}}!!
   </h3>
-
+<br />
 <hr>
+<nav>
+<a [routerLink]="['/pagina-principal']" [routerLinkActive]="['activado']">
+  HOME
+</a>
+|
+<a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">
+  FRUTAS
+</a>
+|
+<a [routerLink]="['/empleado']" [routerLinkActive]="['activado']">
+  EMPLEADO
+</a>
+|
+<a [routerLink]="['/contacto']" [routerLinkActive]="['activado']">
+  CONTACTO
+</a>
+|
+<a [routerLink]="['/coches']" [routerLinkActive]="['activado']">
+  COCHES
+</a>
+</nav>
+<hr />
 <!-- <fruta></fruta> -->
-<empleado></empleado>
+<!-- <empleado></empleado> -->
+
+<router-outlet></router-outlet>

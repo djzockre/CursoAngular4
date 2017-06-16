@@ -1,0 +1,23 @@
+
+<!-- Componente Home -->
+<!-- Se va a crear un servicio -->
+<h2>{{titulo}}</h2>
+
+<h2>{{fecha| date:'dd/MM/yyyy'}}</h2>
+<h2>{{fecha| date:'fullDate' | lowercase}}</h2>
+<h2>{{nombre | lowercase}}</h2>
+
+{{5 | conversor: 7}}
+<hr />
+<br />
+<input type="text" [(ngModel)] = "prenda_guardar"/><br />
+<span>La prenda a guardar es: <strong>{{prenda_guardar}} </strong> </span><br />
+<button (click)="guardarPrenda()">Agregar</button>
+<h3></h3>
+<ul>
+
+  <li *ngFor="let prenda of listado_ropa; let i = index">
+    {{prenda}}
+    <button (click)="eliminarPrenda(i)">Eliminar</button>
+  </li>
+</ul>
