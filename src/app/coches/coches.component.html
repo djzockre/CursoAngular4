@@ -4,9 +4,9 @@
 
 <h1>Componente De coches</h1>
 
-
-<form #formCoche="ngForm" (ngSubmit)="onSubmit()" >
-
+<!-- Creacion de formulario con Angular -->
+<form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset;" >
+  <!--  Hacer que el formulario no muestre los mensajes de validacion con formCoche.reset-->
     <label>Nombre: </label>
     <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required/>
     <span *ngIf="nombre.touched && !nombre.valid">
@@ -27,7 +27,7 @@
      El color es incorrecto
     </span>
     <br />
-      <input type="submit" value="guardar" [disabled]="!formCoche.form.valid"/>
+      <input type="submit" value="guardar"  [disabled]="!formCoche.form.valid"/>
 
 </form>
 
@@ -40,3 +40,23 @@
 </li>
 </ul>
 </div>
+
+<!--  Listado desde el api rest-->
+<div style="float:left">
+<h4>Listado de articulos</h4>
+<ul>
+
+<li *ngFor="let articulo of articulos">
+    <span *ngIf="!articulos"> Cargando listado...</span>
+    <ul *ngIf="articulos">
+      <li>
+        {{articulo.id}} -  {{articulo.title}}
+      </li>
+    </ul>
+
+
+</li>
+</ul>
+</div>
+
+<!--  NG TEMPLATE ES NUEVA CARACTERISTICA DE ANGULAR 4-->
